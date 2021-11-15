@@ -7,7 +7,7 @@ class FurnitureCardComponent {
     }
 
     init = () => {
-const {title, type, price, owner:{fullname, mobile, address, email}, location:{country, city, street},imgSrc} = this.props;
+        const { title, type, price, owner: { fullname, mobile, address, email }, location: { country, city, street }, imgSrc, onDelete } = this.props;
 
         this.htmlElement = document.createElement('article');
         this.htmlElement.className = "card p-3 shadow";
@@ -41,8 +41,12 @@ const {title, type, price, owner:{fullname, mobile, address, email}, location:{c
             <span>location: ${country}, ${city}, ${street}</span>
             </li>
         </ul>
-        `
+<div class="text-center">
+<button class="btn btn-danger">Ištrinti</button>
+</div>`
 
+        const btn = this.htmlElement.querySelector('.btn');
+        btn.addEventListener('click', onDelete);
     }
 
 

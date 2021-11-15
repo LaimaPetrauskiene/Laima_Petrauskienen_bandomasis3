@@ -14,7 +14,7 @@ class FurnitureGridComponent {
         this.render();
     }
 
-    initFetch = () => {
+    initFetch = () => setTimeout(() => {
         API.fetchFurniture(
             (furniture) => {
                 this.state.loading = false;
@@ -26,7 +26,7 @@ class FurnitureGridComponent {
                 this.render();
             }
         );
-    }
+    }, 1000);
 
     saveFurniture = (furniture) => {
         this.state.furniture = furniture;
@@ -34,13 +34,21 @@ class FurnitureGridComponent {
         this.render();
     }
 
+    deleteFurniture = (id) => {
+        API.deleteFurniture(
+            id,
+            () => API.fetchFurniture(this.saveFurniture, alert),
+            alert);
 
-wrapInColumn = (element) => {
-    const column = document.createElement('div');
-    column.className = "col-12 col-sm-6 col-lg-3 col-xl-4";
-    column.appendChild(element);
-    return column;
-}
+    }
+
+
+    wrapInColumn = (element) => {
+        const column = document.createElement('div');
+        column.className = "col-12 col-sm-6 col-lg-3 col-xl-4";
+        column.appendChild(element);
+        return column;
+    }
 
     render = () => {
         const { loading, furniture } = this.state;
@@ -49,11 +57,14 @@ wrapInColumn = (element) => {
         } else if (furniture.length > 0) {
             this.htmlElement.innerHTML = ``;
             const furnitureElements = furniture
-                .map(x => new FurnitureCardComponent(x))
+                .map(({ id, ...props }) => new FurnitureCardComponent({
+                    ...props,
+                    onDelete: () => this.deleteFurniture(id)
+                }))
                 .map(x => x.htmlElement)
                 .map(this.wrapInColumn);
             this.htmlElement.append(...furnitureElements)
-        }else{
+        } else {
             this.htmlElement.innerHTML = `Šiuo metu baldų nėra`
         }
     }
