@@ -7,9 +7,45 @@ class FurnitureCardComponent {
     }
 
     init = () => {
+const {title, type, price, owner:{fullname, mobile, address, email}, location:{country, city, street},imgSrc} = this.props;
+
         this.htmlElement = document.createElement('article');
         this.htmlElement.className = "card p-3 shadow";
-        this.htmlElement.innerHTML = `<h2 class h5>Kortele</h2>`
+        this.htmlElement.innerHTML = `
+        <img src="${imgSrc}"/>
+        <ul>
+            <li>
+            <h2 class="text-danger">${title}</h2>
+            </li>
+            <li>
+            <span>${type}</span>
+            </li>
+            <li>
+            <span class="text-success"><strong>${price} $</strong></span>
+            </li>
+            <hr>
+            <li>
+            <span>owner: <strong>${fullname}</strong></span>
+            </li>
+            <li>
+            <span>mobile: <strong>${mobile}</strong></span>
+            </li>
+            <li>
+            <span>address: <strong>${address}</strong></span>
+            </li>
+            <li>
+            <span>email: <strong>${email}</strong></span>
+            </li>
+            <hr>
+            <li>
+            <span>location: ${country}, ${city}, ${street}</span>
+            </li>
+        </ul>
+        `
 
     }
+
+
+
+
 }

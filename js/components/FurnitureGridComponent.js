@@ -30,9 +30,17 @@ class FurnitureGridComponent {
 
     saveFurniture = (furniture) => {
         this.state.furniture = furniture;
-        this.state.loading = false;
+        this.htmlElement.className = "row g-3";
         this.render();
     }
+
+
+wrapInColumn = (element) => {
+    const column = document.createElement('div');
+    column.className = "col-12 col-sm-6 col-lg-3 col-xl-4";
+    column.appendChild(element);
+    return column;
+}
 
     render = () => {
         const { loading, furniture } = this.state;
@@ -42,8 +50,11 @@ class FurnitureGridComponent {
             this.htmlElement.innerHTML = ``;
             const furnitureElements = furniture
                 .map(x => new FurnitureCardComponent(x))
-                .map(x => x.htmlElement);
+                .map(x => x.htmlElement)
+                .map(this.wrapInColumn);
             this.htmlElement.append(...furnitureElements)
+        }else{
+            this.htmlElement.innerHTML = `Šiuo metu baldų nėra`
         }
     }
 }
