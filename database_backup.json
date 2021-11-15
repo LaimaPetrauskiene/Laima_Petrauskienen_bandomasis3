@@ -8,7 +8,7 @@
        "location": {
           "country": "Lietuva",
           "city": "Vilnius",
-          "street": "Vilniaus",
+          "street": "Vilniaus"
         },
         "owner": {
           "fullname": "Onutė Vasiliauskaitė",
@@ -26,7 +26,7 @@
    "location": {
       "country": "Lietuva",
       "city": "Vilnius",
-      "street": "Vilniaus",
+      "street": "Vilniaus"
     },
     "owner": {
       "fullname": "Onutė Vasiliauskaitė",
@@ -44,7 +44,7 @@
 "location": {
   "country": "Lietuva",
   "city": "Vilnius",
-  "street": "Vilniaus",
+  "street": "Vilniaus"
 },
 "owner": {
   "fullname": "Onutė Vasiliauskaitė",
@@ -53,7 +53,7 @@
   "email":"labas@gmail.com"
 },
 "imgSrc": "https://furniture1.sirv.com/976/976440.jpg"
-},
+}
         
     ]
 }

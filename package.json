@@ -1,0 +1,23 @@
+{
+  "name": "laima_petrauskienen_bandomasis3",
+  "version": "1.0.0",
+  "description": "CAFE bandomasis atsiskaitymas 3",
+  "main": "index.js",
+  "scripts": {
+    "start-unix": "node_modules/.bin/json-server --watch database.json",
+    "start-win": "node_modules\\.bin\\json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaimaPetrauskiene/Laima_Petrauskienen_bandomasis3.git"
+  },
+  "author": "Laima Petrauskien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaimaPetrauskiene/Laima_Petrauskienen_bandomasis3/issues"
+  },
+  "homepage": "https://github.com/LaimaPetrauskiene/Laima_Petrauskienen_bandomasis3#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
