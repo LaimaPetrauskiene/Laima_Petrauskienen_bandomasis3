@@ -1,0 +1,59 @@
+{
+    "furniture": [
+        {
+            "id": "1",
+            "title": "sofa",
+        "type": "minkštas baldas",
+        "price": 759.99,
+       "location": {
+          "country": "Lietuva",
+          "city": "Vilnius",
+          "street": "Vilniaus",
+        },
+        "owner": {
+          "fullname": "Onutė Vasiliauskaitė",
+          "mobile": "+37068712345",
+          "address": "Vilniaus g. 5-25",
+          "email":"labas@gmail.com"
+        },
+        "imgSrc": "https://furniture1.sirv.com/976/976440.jpg"
+      },
+      {
+        "id": "2",
+        "title": "sofa",
+    "type": "minkštas baldas",
+    "price": 759.99,
+   "location": {
+      "country": "Lietuva",
+      "city": "Vilnius",
+      "street": "Vilniaus",
+    },
+    "owner": {
+      "fullname": "Onutė Vasiliauskaitė",
+      "mobile": "+37068712345",
+      "address": "Vilniaus g. 5-25",
+      "email":"labas@gmail.com"
+    },
+    "imgSrc": "https://furniture1.sirv.com/976/976440.jpg"
+  },
+  {
+    "id": "3",
+    "title": "sofa",
+"type": "minkštas baldas",
+"price": 759.99,
+"location": {
+  "country": "Lietuva",
+  "city": "Vilnius",
+  "street": "Vilniaus",
+},
+"owner": {
+  "fullname": "Onutė Vasiliauskaitė",
+  "mobile": "+37068712345",
+  "address": "Vilniaus g. 5-25",
+  "email":"labas@gmail.com"
+},
+"imgSrc": "https://furniture1.sirv.com/976/976440.jpg"
+},
+        
+    ]
+}
