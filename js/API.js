@@ -5,16 +5,18 @@ class API {
 
 
     static fetchFurniture = (success, failure) => {
-        fetch(`${baseURL}/furniture`)
-            .then(res => res.json())
-            .then(success)
-            .catch(failure)
+        setTimeout(() => {
+            fetch(`${baseURL}/furniture`)
+                .then(res => res.json())
+                .then(success)
+                .catch(failure)
+        }, 1000);
     }
 
     static deleteFurniture = (id, success, failure) => {
-        fetch(`${baseURL}/furniture/${id}`, {method: 'DELETE'})
-        .then(res => res.status === 200 ? success() : failure(res.statusText))
-        .catch(failure)
+        fetch(`${baseURL}/furniture/${id}`, { method: 'DELETE' })
+            .then(res => res.status === 200 ? success() : failure(res.statusText))
+            .catch(failure)
     }
 
 

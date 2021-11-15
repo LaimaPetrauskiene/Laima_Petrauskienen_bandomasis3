@@ -37,9 +37,13 @@ class FurnitureGridComponent {
     render = () => {
         const { loading, furniture } = this.state;
         if (loading) {
-            this.htmlElement.innerHTML = 'Siunčiama...';
-        } else {
-            this.htmlElement.innerHTML = 'parsiųsta!';
+            this.htmlElement.innerHTML = `<div class="text-center"><img src="assets/loading.gif"/></div>`;
+        } else if (furniture.length > 0) {
+            this.htmlElement.innerHTML = ``;
+            const furnitureElements = furniture
+                .map(x => new FurnitureCardComponent(x))
+                .map(x => x.htmlElement);
+            this.htmlElement.append(...furnitureElements)
         }
     }
 }
