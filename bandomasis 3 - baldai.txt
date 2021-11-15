@@ -10,23 +10,7 @@
     - Taip pat rekomenduojama susikurti json duomenų kopiją, jog aplikacijai pakeitus duomenis būtų galima persikopijuoti orginalius/pradinius duomenis.
     - Baldą aprašančios savybės:
       type Furniture = {
-        id: string;
-        title: string;
-        type: string;
-        price: number;
-        location: {
-          country: string;
-          city: string;
-          street: string;
-        }
-        owner: {
-          fullname: string;
-          mobile: string;
-          address: string;
-          email: string
-        },
-        imgSrc: string;
-      }
+        
 
 3. Sukurkite projekto aprašymą: [1]  
   - sugeneruokite package.json failą
